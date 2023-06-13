@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
                         String[] dataList = str.split("[,\n]");
                         for(int i = 1; i < dataList.length; i += 2) {
                             TableRow ligne = new TableRow(tblLayout.getContext());
-                            // colonne type
                             TextView type = new TextView(tblLayout.getContext());
                             type.setText(dataList[i - 1]);
                             type.setPadding(5, 5, 5, 5);
@@ -41,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
                             TableRow.LayoutParams typeParams = new TableRow.LayoutParams(0, TableRow.LayoutParams.WRAP_CONTENT, 3f);
                             type.setLayoutParams(typeParams);
                             ligne.addView(type);
-                            // colonne nombre
                             TextView nombre = new TextView(tblLayout.getContext());
                             nombre.setText(dataList[i]);
                             nombre.setPadding(5, 5, 5, 5);
