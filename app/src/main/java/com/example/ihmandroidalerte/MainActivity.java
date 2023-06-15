@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
     Runnable r = new Runnable() {
         @Override
         public void run() {
-            serveurNotifications s = new serveurNotifications();
+            serveurNotifications s = new serveurNotifications(1024);
             String str = s.receptionPacket();
             runOnUiThread(new Runnable() {
                 @Override
